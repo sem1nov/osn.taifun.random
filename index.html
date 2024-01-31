@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ТРЕНИРОВКА</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0; /* Цвет фона */
+      background-image: url('img/nn.jpg'); /* Замените 'background.jpg' на путь к вашему изображению */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      height: 100vh; /* Заполнить высоту окна браузера */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: white; /* Изменение цвета шрифта на синий */
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50; /* Цвет кнопки */
+      color: white;
+    }
+    button:hover {
+      background-color: #45a049; /* Цвет кнопки при наведении */
+    }
+  </style>
+</head>
+<body>
+  <button onclick="generateRandomOption()">Выдать тренировку</button>
+  <br>
+  <button onclick="goToLink()">Таблица тренировок</button>
+<br>
+  <button onclick="goToPredefinedLink()">Информационный центр</button>
+    <h1>Создатель: Leo_Semino</h1>
+  <script>
+    var options = ['Лекция - Штурм', 'Тренировка - Штурм', 'Тренировка - Разминирование', 'Тренировка- Переговоры', 'Лекция - Разминирование','Лекция - Первая помощь','Тренировка - Первая помощь','Лекция- Допрос' , 'Проверка - Юриспруденция', , 'Проверка - ФЗ', , 'Проверка - УК',]; // Замените на ваши варианты
+
+    function generateRandomOption() {
+      var randomIndex = Math.floor(Math.random() * options.length);
+      var randomOption = options[randomIndex];
+      alert("Ваша задача: " + randomOption);
+    }
+
+    function goToLink() {
+      window.location.href = "https://docs.google.com/spreadsheets/d/1nxL1Zky8F-UKv3uZBiRnMh2WSzVD-PlgNCksWCXPUUY/edit?usp=sharing"; // Замените ссылку на желаемую
+    }
+      
+      function goToPredefinedLink() {
+      window.location.href = "https://sites.google.com/view/osn-taifyn/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0"; // Замените ссылку на предопределенную ссылку
+    }
+      
+  </script>
+</body>
+</html>
